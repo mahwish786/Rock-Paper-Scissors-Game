@@ -28,9 +28,7 @@ function handleWinner(userWins, userChoice, compChoice) {
     userScoreEl.innerText = userScore;
     messageEl.innerText = `You Win! ${capitalize(userChoice)} beats ${capitalize(compChoice)}.`;
     messageEl.style.boxShadow = "0 0 15px green";
-  } 
-  
-  else {
+  } else {
     compScore++;
     compScoreEl.innerText = compScore;
     messageEl.innerText = `You Lose! ${capitalize(compChoice)} beats ${capitalize(userChoice)}.`;
@@ -50,7 +48,11 @@ function checkWinner(userChoice, compChoice) {
     return;
   }
 
-  const winConditions = {rock: "scissors", paper: "rock", scissors: "paper",};
+  const winConditions = {
+    rock: "scissors",
+    paper: "rock",
+    scissors: "paper",
+  };
 
   const userWins = winConditions[userChoice] === compChoice;
   handleWinner(userWins, userChoice, compChoice);
@@ -60,6 +62,7 @@ function checkWinner(userChoice, compChoice) {
 function playGame(userChoice) {
   const compChoice = getComputerChoice();
   checkWinner(userChoice, compChoice);
+}
 
 // ====== Event Listeners for Choices ======
 choices.forEach(choice => {
