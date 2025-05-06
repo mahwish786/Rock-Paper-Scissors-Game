@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+body {
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/1016/139/624/narrow-rail-glossy-floor-dark-wood-wallpaper-preview.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    background-color: black;
+    color: burlywood;
+    height: 5rem;
+    line-height: 5rem;
+    text-shadow: 0 0 10px burlywood, 0 0 20px burlywood;
+    border-radius: 1rem;
+    border: 2px solid beige;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.choice {
+    height: 165px;
+    width: 165px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgb(247, 207, 157), 0 0 20px rgb(247, 207, 157);
+    background-color: saddlebrown;
+    transition: background-color 0.3s ease;
+}
+
+.choice:hover {
+    cursor: pointer;
+    background-color: bisque;
+}
+
+.choice img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.choice img:hover {
+    transform: scale(1.05);
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: bisque;
+    text-shadow: 0 0 10px bisque, 0 0 20px bisque;
+    margin-top: 3rem;
+    gap: 5rem;
+}
+
+#user-score,
+#comp-score {
+    font-size: 4rem;
+}
+
+.msg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    background-color: blanchedalmond;
+    color: saddlebrown;
+    text-shadow: 0 0 10px brown, 0 0 20px brown;
+    border: 3px solid saddlebrown;
+    box-shadow: 0 0 10px bisque, 0 0 20px bisque;
+    margin-top: 3rem;
+    font-weight: bolder;
+    font-size: 20px;
+    border-radius: 1rem;
+}
