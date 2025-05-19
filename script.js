@@ -3,6 +3,7 @@ const choices = document.querySelectorAll(".choice");
 const userScoreEl = document.querySelector("#user-score");
 const compScoreEl = document.querySelector("#comp-score");
 const messageEl = document.querySelector(".msg");
+const resetBtn = document.querySelector("#reset"); // <- RESET button
 
 // ====== Score Tracking Variables ======
 let userScore = 0;
@@ -67,7 +68,17 @@ function playGame(userChoice) {
 // ====== Event Listeners for Choices ======
 choices.forEach(choice => {
   choice.addEventListener("click", () => {
-    const userChoice = choice.id; // "rock", "paper", or "scissors"
+    const userChoice = choice.id;
     playGame(userChoice);
   });
+});
+
+// ====== Reset Button Logic ======
+resetBtn.addEventListener("click", () => {
+  userScore = 0;
+  compScore = 0;
+  userScoreEl.innerText = userScore;
+  compScoreEl.innerText = compScore;
+  messageEl.innerText = "Play Your Move";
+  messageEl.style.boxShadow = "0 0 15px rgba(255, 255, 255, 0.5)";
 });
